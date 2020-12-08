@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="dist/lib/controlsfx-8.40.14.jar"/>
+	<classpathentry kind="lib" path="dist/lib/jasperreports-5.0.1.jar"/>
+	<classpathentry kind="lib" path="dist/lib/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="dist/RPOS.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

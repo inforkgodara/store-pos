@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1350.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainPanelController">
+   <left>
+      <VBox prefHeight="601.0" prefWidth="160.0" style="-fx-background-color: #404040;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="addPurchase" mnemonicParsing="false" onAction="#loadAddPurchaseView" prefHeight="30.0" prefWidth="189.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Add Purchase" textAlignment="JUSTIFY">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="purchaseDetail" mnemonicParsing="false" onAction="#loadListPurchaseView" prefHeight="30.0" prefWidth="185.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Purchase Detail" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="addPurchaseReturn" mnemonicParsing="false" onAction="#loadAddPurchaseReturnView" prefHeight="30.0" prefWidth="181.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Add Purchase Return" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="purchaseReturnDetail" mnemonicParsing="false" onAction="#loadListPurchaseReturnView" prefHeight="30.0" prefWidth="173.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Purchase Return Detail" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="addSales" mnemonicParsing="false" onAction="#loadAddSalesView" prefHeight="30.0" prefWidth="172.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Add Sales" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="salesDetail" mnemonicParsing="false" onAction="#loadListSalesView" prefHeight="30.0" prefWidth="168.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Sales Detail" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="addSalesReturn" mnemonicParsing="false" onAction="#loadAddSalesReturnView" prefHeight="30.0" prefWidth="168.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Add Sales Return" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="salesReturnDetail" mnemonicParsing="false" onAction="#loadListSalesReturnView" prefHeight="30.0" prefWidth="175.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Sales Return Detail" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="button1" mnemonicParsing="false" prefHeight="30.0" prefWidth="175.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Inventory Transfer" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="button2" mnemonicParsing="false" prefHeight="30.0" prefWidth="175.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Inv Transfer Details" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="button3" mnemonicParsing="false" prefHeight="30.0" prefWidth="175.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Inv Reconciliation" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="button3" mnemonicParsing="false" prefHeight="30.0" prefWidth="160.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Inv Reconciliation Details" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="button4" mnemonicParsing="false" prefHeight="30.0" prefWidth="175.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Add Receipt" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="button5" mnemonicParsing="false" prefHeight="30.0" prefWidth="175.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Receipt Detail" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="button6" mnemonicParsing="false" prefHeight="30.0" prefWidth="175.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Add Payment" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="button7" mnemonicParsing="false" prefHeight="30.0" prefWidth="175.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Payment Detail" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="button8" mnemonicParsing="false" prefHeight="30.0" prefWidth="175.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Add Journal" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="journalDetail" mnemonicParsing="false" prefHeight="30.0" prefWidth="175.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Journal Detail" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="800.0" style="-fx-background-color: #2b2a26;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="journalDetail1" mnemonicParsing="false" prefHeight="18.0" prefWidth="74.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Log Out" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets right="4.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets right="5.0" />
+         </BorderPane.margin></HBox>
+   </top>
+</BorderPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="RPOS.jnlp">
+  <information>
+    <title>RPOS</title>
+    <vendor>Ramesh Godara</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="RPOS.jar" size="127109" download="eager" />
+    <jar href="lib\aopalliance-1.0.jar" size="4467" download="eager" />
+    <jar href="lib\bcmail-jdk14-1.38.jar" size="192035" download="eager" />
+    <jar href="lib\bcmail-jdk14-138.jar" size="192035" download="eager" />
+    <jar href="lib\bcprov-jdk14-1.38.jar" size="1551468" download="eager" />
+    <jar href="lib\bcprov-jdk14-138.jar" size="1551468" download="eager" />
+    <jar href="lib\bctsp-jdk14-1.38.jar" size="22994" download="eager" />
+    <jar href="lib\castor-core-1.3.3.jar" size="49513" download="eager" />
+    <jar href="lib\castor-xml-1.3.3.jar" size="872827" download="eager" />
+    <jar href="lib\commons-beanutils-1.9.0.jar" size="230951" download="eager" />
+    <jar href="lib\commons-collections-3.2.2.jar" size="588337" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-lang-2.6.jar" size="284220" download="eager" />
+    <jar href="lib\commons-logging-1.1.1.jar" size="60686" download="eager" />
+    <jar href="lib\controlsfx-8.40.14.jar" size="1215643" download="eager" />
+    <jar href="lib\core-2.3.0.jar" size="528506" download="eager" />
+    <jar href="lib\ecj-4.3.1.jar" size="1830791" download="eager" />
+    <jar href="lib\icu4j-57.1.jar" size="11289823" download="eager" />
+    <jar href="lib\itext-2.1.7.js5.jar" size="1132307" download="eager" />
+    <jar href="lib\jackson-annotations-2.1.4.jar" size="34476" download="eager" />
+    <jar href="lib\jackson-core-2.1.4.jar" size="206866" download="eager" />
+    <jar href="lib\jackson-databind-2.1.4.jar" size="926562" download="eager" />
+    <jar href="lib\jakarta-regexp-1.4.jar" size="28576" download="eager" />
+    <jar href="lib\jasperreports-6.3.0.jar" size="5403912" download="eager" />
+    <jar href="lib\javax.inject-1.jar" size="2497" download="eager" />
+    <jar href="lib\jcommon-1.0.23.jar" size="330246" download="eager" />
+    <jar href="lib\jfreechart-1.0.19.jar" size="1565065" download="eager" />
+    <jar href="lib\lucene-analyzers-common-4.5.1.jar" size="1586103" download="eager" />
+    <jar href="lib\lucene-core-4.5.1.jar" size="2297477" download="eager" />
+    <jar href="lib\lucene-queries-4.5.1.jar" size="205195" download="eager" />
+    <jar href="lib\lucene-queryparser-4.5.1.jar" size="384884" download="eager" />
+    <jar href="lib\lucene-sandbox-4.5.1.jar" size="45578" download="eager" />
+    <jar href="lib\ojdbc14.jar" size="1536554" download="eager" />
+    <jar href="lib\olap4j-0.9.7.309-JS-3.jar" size="445343" download="eager" />
+    <jar href="lib\spring-aop-3.0.6.RELEASE.jar" size="321428" download="eager" />
+    <jar href="lib\spring-asm-3.0.6.RELEASE.jar" size="53082" download="eager" />
+    <jar href="lib\spring-beans-3.0.6.RELEASE.jar" size="556590" download="eager" />
+    <jar href="lib\spring-context-3.0.6.RELEASE.jar" size="670258" download="eager" />
+    <jar href="lib\spring-core-3.0.6.RELEASE.jar" size="382184" download="eager" />
+    <jar href="lib\spring-expression-3.0.6.RELEASE.jar" size="169752" download="eager" />
+    <jar href="lib\stax-1.2.0.jar" size="179346" download="eager" />
+    <jar href="lib\stax-api-1.0-2.jar" size="23346" download="eager" />
+    <jar href="lib\stax-api-1.0.1.jar" size="26514" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="RPOS" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="main.AddSalesInvoiceInit"  name="RPOS" />
+  <update check="always"/>
+</jnlp>

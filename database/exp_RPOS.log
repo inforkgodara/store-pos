@@ -1,0 +1,65 @@
+
+Connected to: Oracle Database 11g Enterprise Edition Release 11.2.0.1.0 - Production
+With the Partitioning, OLAP, Data Mining and Real Application Testing options
+Export done in WE8MSWIN1252 character set and AL16UTF16 NCHAR character set
+server uses AL32UTF8 character set (possible charset conversion)
+
+About to export specified users ...
+. exporting pre-schema procedural objects and actions
+. exporting foreign function library names for user POS 
+. exporting PUBLIC type synonyms
+. exporting private type synonyms
+. exporting object type definitions for user POS 
+About to export POS's objects ...
+. exporting database links
+. exporting sequence numbers
+. exporting cluster definitions
+. about to export POS's tables via Conventional Path ...
+. . exporting table                      CUSTOMERS
+                                                            4 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                          ITEMS
+                                                            4 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                    ITEM_PRICES
+.............
+                                                        13441 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                      PURCHASES
+                                                            0 rows exported
+. . exporting table               PURCHASE_DETAILS
+                                                            0 rows exported
+. . exporting table               PURCHASE_RETURNS
+                                                            0 rows exported
+. . exporting table        PURCHASE_RETURN_DETAILS
+                                                            0 rows exported
+. . exporting table                          SALES
+                                                            0 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                   SALE_DETAILS
+                                                            0 rows exported
+EXP-00091: Exporting questionable statistics.
+. . exporting table                   SALE_RETURNS
+                                                            0 rows exported
+. . exporting table            SALE_RETURN_DETAILS
+                                                            0 rows exported
+. . exporting table                           UOMS
+                                                           62 rows exported
+EXP-00091: Exporting questionable statistics.
+. exporting synonyms
+. exporting views
+. exporting stored procedures
+. exporting operators
+. exporting referential integrity constraints
+. exporting triggers
+. exporting indextypes
+. exporting bitmap, functional and extensible indexes
+. exporting posttables actions
+. exporting materialized views
+. exporting snapshot logs
+. exporting job queues
+. exporting refresh groups and children
+. exporting dimensions
+. exporting post-schema procedural objects and actions
+. exporting statistics
+Export terminated successfully with warnings.
