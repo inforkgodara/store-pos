@@ -1,5 +1,21 @@
 # JavaFx ERP
-This is simple point of sale for retail store which is developed in java JavaFx. The details will be updated soon. 
+This is simple accounting erp for retail store which is developed in java JavaFx.
+
+## Prerequisites
+
+You must have following programs/packages in order to run this project.
+
+* Java 1.8.0_66
+* JasperReport 6.16.0
+* controlsfx-8.40.14
+* Oracle Database 11.2.0.1.0
+
+## Used IDE
+
+* NetBeans IDE 8.0.2
+* JavaFX Scene Builder 11.0.0
+* TIBCO Jaspersoft® Studio 6.8.0
+* Toad for Oracle 10
 
 ## Screenshots
 
