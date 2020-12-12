@@ -5,12 +5,14 @@ This is simple accounting erp for retail store which is developed in java JavaFx
 
 You must have following programs/packages in order to run this project.
 
+### Technology
+
 * Java 1.8.0_66
 * JasperReport 6.16.0
 * controlsfx-8.40.14
 * Oracle Database 11.2.0.1.0
 
-## Used IDE
+### IDE
 
 * NetBeans IDE 8.0.2
 * JavaFX Scene Builder 11.0.0
