@@ -1,5 +1,5 @@
 # JavaFx ERP
-This is simple accounting erp for retail store which is developed in java JavaFx.
+This is simple accounting erp for retail store which is developed in java JavaFx. Purchase and sale modules are completed inventory and finance module may be developed later once get time. I also looking for a java open source contributor who can help us to develop a complete product of accounting and finance erp.
 
 ## Prerequisites
 
@@ -18,6 +18,13 @@ You must have following programs/packages in order to run this project.
 * JavaFX Scene Builder 11.0.0
 * TIBCO Jaspersoft® Studio 6.8.0
 * Toad for Oracle 10
+
+## Approach
+
+* First need to clone this respiratory.
+* Configure your database schema credentials in src/database/DbConnection.
+* Import database from database/RPOS.DMP using (SQL Developer/SQL++, TOAD, etc).
+* Run this project as part of java code through NetBeans IDE or command prompts.
 
 ## Screenshots
 
