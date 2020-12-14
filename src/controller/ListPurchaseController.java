@@ -27,6 +27,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Pagination;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -41,23 +42,66 @@ import model.PurchaseModel;
  */
 public class ListPurchaseController implements Initializable {
 
-    @FXML
-    private TableView tableView;
-
     private Connection con;
+
+//    @FXML
+//    private TableView tableView;
 
     @FXML
     private Button deleteButton;
+
+    @FXML
+    private Pagination pagination;
+    
+    private final TableView<PurchaseModel> tableView = createTable();
+    private static final int rowsPerPage = 1;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
         DbConnection dbc = DbConnection.getDatabaseConnection();
         con = dbc.getConnection();
+        pagination.setPageFactory(this::createPage);
+//        pagination.setMaxPageIndicatorCount(5);
+        
+    }
 
+    //method to create page inside pagination view
+    private Node createPage(int pageIndex) {
+        this.createData(pageIndex);
+        return tableView;
+    }
+
+    //this method used to fill data in tableview
+    private void createData(int pageIndex) {
+        try {
+            Statement stmt = con.createStatement();
+            String query = "SELECT * FROM ( SELECT a.*, rownum r__ FROM ( SELECT * FROM purchases ORDER BY order_id desc ) a WHERE rownum < (("+ (pageIndex + 1 )+" * "+ rowsPerPage+") + 1 )) WHERE r__ >= ((("+ (pageIndex + 1 )+"-1) * "+ rowsPerPage+") + 1)";
+            ResultSet rs = stmt.executeQuery(query);
+
+            tableView.getItems().clear();
+            try {
+                while (rs.next()) {
+                    System.out.println("Hi i i i i i i i i i");
+                    tableView.getItems().addAll(new PurchaseModel(rs.getLong("order_id"), String.valueOf(rs.getDate("invoice_date")),
+                            rs.getString("party_name"), rs.getFloat("total_quantity"), rs.getFloat("total_amount"),
+                            rs.getFloat("other_amount"), rs.getFloat("total_payble_amount"), rs.getFloat("total_paid_amount"), rs.getFloat("total_due_amount")));
+                }
+            } catch (SQLException ex) {
+                System.out.println(ex);
+            }
+
+        } catch (SQLException ex) {
+            Logger.getLogger(ListPurchaseController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    private TableView<PurchaseModel> createTable() { 
+        
+        TableView<PurchaseModel> tableView = new TableView<>();
+        
         String rightPositionCSS = "-fx-alignment: CENTER-RIGHT;";
         String centerPostionCSS = "-fx-alignment: CENTER;";
 
@@ -94,28 +138,10 @@ public class ListPurchaseController implements Initializable {
         columnTotalDueAmount.setCellValueFactory(new PropertyValueFactory<>("totalDueAmount"));
         columnTotalDueAmount.setStyle(rightPositionCSS);
 
-        tableView.getColumns().add(columnInvoiceId);
-        tableView.getColumns().add(columnInvoiceDate);
-        tableView.getColumns().add(columnPartyName);
-        tableView.getColumns().add(columnTotalQuantity);
-        tableView.getColumns().add(columnTotalAmount);
-        tableView.getColumns().add(columnOtherAmount);
-        tableView.getColumns().add(columnTotalPaybleAmount);
-        tableView.getColumns().add(columnTotalPaidAmount);
-        tableView.getColumns().add(columnTotalDueAmount);
+        tableView.getColumns().addAll(columnInvoiceId, columnInvoiceDate, columnPartyName, columnTotalQuantity,
+                columnTotalAmount, columnOtherAmount, columnTotalPaybleAmount, columnTotalPaidAmount, columnTotalDueAmount);
 
-        try {
-            Statement stmt = con.createStatement();
-            String query = "select * from purchases order by order_id desc";
-            ResultSet rs = stmt.executeQuery(query);
-            while (rs.next()) {
-                tableView.getItems().addAll(new PurchaseModel(rs.getLong("order_id"), String.valueOf(rs.getDate("invoice_date")),
-                        rs.getString("party_name"), rs.getFloat("total_quantity"), rs.getFloat("total_amount"),
-                        rs.getFloat("other_amount"), rs.getFloat("total_payble_amount"), rs.getFloat("total_paid_amount"), rs.getFloat("total_due_amount")));
-            }
-        } catch (SQLException ex) {
-            System.out.println(ex);
-        }
+        return tableView;
     }
 
     @FXML
@@ -136,10 +162,10 @@ public class ListPurchaseController implements Initializable {
 
     @FXML
     private void deleteInvoice(ActionEvent event) {
-    Window owner = deleteButton.getScene().getWindow();
-    AlertHelper.showAlert(Alert.AlertType.CONFIRMATION, owner, "Confirmation",
-                    "Do you want to delete it?");
-    if (AlertHelper.result) {
+        Window owner = deleteButton.getScene().getWindow();
+        AlertHelper.showAlert(Alert.AlertType.CONFIRMATION, owner, "Confirmation",
+                "Do you want to delete it?");
+        if (AlertHelper.result) {
             List<PurchaseModel> collect = (List<PurchaseModel>) tableView.getSelectionModel().getSelectedItems().stream().collect(Collectors.toList());
             long orderId = collect.get(0).getOrderId();
             EditPurchaseController.orderId = orderId;
