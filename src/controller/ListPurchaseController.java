@@ -64,17 +64,14 @@ public class ListPurchaseController implements Initializable {
         DbConnection dbc = DbConnection.getDatabaseConnection();
         con = dbc.getConnection();
         pagination.setPageFactory(this::createPage);
-//        pagination.setMaxPageIndicatorCount(5);
         
     }
 
-    //method to create page inside pagination view
     private Node createPage(int pageIndex) {
         this.createData(pageIndex);
         return tableView;
     }
 
-    //this method used to fill data in tableview
     private void createData(int pageIndex) {
         try {
             Statement stmt = con.createStatement();
@@ -84,7 +81,6 @@ public class ListPurchaseController implements Initializable {
             tableView.getItems().clear();
             try {
                 while (rs.next()) {
-                    System.out.println("Hi i i i i i i i i i");
                     tableView.getItems().addAll(new PurchaseModel(rs.getLong("order_id"), String.valueOf(rs.getDate("invoice_date")),
                             rs.getString("party_name"), rs.getFloat("total_quantity"), rs.getFloat("total_amount"),
                             rs.getFloat("other_amount"), rs.getFloat("total_payble_amount"), rs.getFloat("total_paid_amount"), rs.getFloat("total_due_amount")));

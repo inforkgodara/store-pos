@@ -15,7 +15,7 @@ public class DbConnection {
     private DbConnection() {
         try {
             DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
-            con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","pos","");
+            con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:orcl","pos","log");
         } catch (SQLException ex) {
             Logger.getLogger(DbConnection.class.getName()).log(Level.SEVERE, null, ex);
         }

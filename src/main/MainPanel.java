@@ -9,13 +9,14 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
  *
  * @author Ramesh Godara
  */
-public class AddSalesInvoiceInit extends Application {
+public class MainPanel extends Application {
     
     public void start(Stage stage) throws Exception {
         
@@ -25,7 +26,8 @@ public class AddSalesInvoiceInit extends Application {
        
         
         stage.setScene(scene);
-        stage.setTitle("RPOS - Powered by Ramesh Godara");
+        stage.setTitle("Store ERP - Powered by Ramesh Godara");
+        stage.getIcons().add(new Image("/asset/icon.png"));
         stage.show();
     }
 
