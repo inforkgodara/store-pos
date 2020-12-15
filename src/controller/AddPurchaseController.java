@@ -30,6 +30,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -104,6 +105,9 @@ public class AddPurchaseController implements Initializable {
 
     @FXML
     private TextField textFieldRemarks;
+    
+    @FXML
+    private DatePicker date;
 
     Set<String> items = new HashSet<>();
     SuggestionProvider<String> provider = SuggestionProvider.create(items);
@@ -437,12 +441,13 @@ public class AddPurchaseController implements Initializable {
             ResultSet rs1 = stmt.executeQuery("select purchases_order_id.nextval from dual");
             rs1.next();
             int posSequence = rs1.getInt("nextval");
-            String query = "insert into purchases (order_id,TOTAL_QUANTITY,TOTAL_AMOUNT,OTHER_AMOUNT,TOTAL_PAYBLE_AMOUNT,"
+            String query = "insert into purchases (order_id,INVOICE_DATE,TOTAL_QUANTITY,TOTAL_AMOUNT,OTHER_AMOUNT,TOTAL_PAYBLE_AMOUNT,"
                     + "TOTAL_PAID_AMOUNT,TOTAL_DUE_AMOUNT,PARTY_NAME,PARTY_CONTACT,REMARKS)"
-                    + "values(" + posSequence + ",'" + textFieldTotalQuantity.getText() + "','" + textFieldTotalAmount.getText() + "',"
+                    + "values(" + posSequence + ",date '" + date.getValue() +"','" + textFieldTotalQuantity.getText() + "','" + textFieldTotalAmount.getText() + "',"
                     + "'" + textFieldTotalOther.getText() + "','" + textFieldTotalPaybleAmount.getText() + "','" + textFieldTotalPaidAmount.getText() + "','" + textFieldTotalDueAmount.getText() + "',"
                     + "'" + textFieldParty.getText() + "','" + textFieldContact.getText() + "',"
                     + "'" + textFieldRemarks.getText() + "')";
+            System.out.println(query);
             int rs = stmt.executeUpdate(query);
 
             String posDetailsQuery = "insert into purchase_details (order_id,ITEM_ID,ITEM_NAME,UOM,QUANTITY,PRICE,AMOUNT) ";

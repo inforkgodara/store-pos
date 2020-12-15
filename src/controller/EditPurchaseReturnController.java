@@ -34,6 +34,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -104,6 +105,9 @@ public class EditPurchaseReturnController implements Initializable {
 
     @FXML
     private TextField textFieldRemarks;
+    
+    @FXML
+    private DatePicker date;
 
     Set<String> items = new HashSet<>();
     SuggestionProvider<String> provider = SuggestionProvider.create(items);
@@ -450,9 +454,9 @@ public class EditPurchaseReturnController implements Initializable {
             Statement stmt = con.createStatement();
             stmt.executeQuery("delete from purchase_returns where order_id = " + orderId);
             stmt.executeQuery("delete from purchase_return_details where order_id =" + orderId);
-            String query = "insert into purchase_returns (order_id,TOTAL_QUANTITY,TOTAL_AMOUNT,OTHER_AMOUNT,TOTAL_PAYBLE_AMOUNT,"
+            String query = "insert into purchase_returns (order_id,INVOICE_DATE,TOTAL_QUANTITY,TOTAL_AMOUNT,OTHER_AMOUNT,TOTAL_PAYBLE_AMOUNT,"
                     + "TOTAL_PAID_AMOUNT,TOTAL_DUE_AMOUNT,PARTY_NAME,PARTY_CONTACT,REMARKS)"
-                    + "values(" + orderId + ",'" + textFieldTotalQuantity.getText() + "','" + textFieldTotalAmount.getText() + "',"
+                    + "values(" + orderId + "," + "date '" + date.getValue() + "','" + textFieldTotalQuantity.getText() + "','" + textFieldTotalAmount.getText() + "',"
                     + "'" + textFieldTotalOther.getText() + "','" + textFieldTotalPaybleAmount.getText() + "','" + textFieldTotalPaidAmount.getText() + "','" + textFieldTotalDueAmount.getText() + "',"
                     + "'" + textFieldParty.getText() + "','" + textFieldContact.getText() + "',"
                     + "'" + textFieldRemarks.getText() + "')";
@@ -511,6 +515,7 @@ public class EditPurchaseReturnController implements Initializable {
         textFieldTotalPaidAmount.clear();
         textFieldTotalPaybleAmount.clear();
         textFieldTotalQuantity.clear();
+        date.getEditor().clear();
     }
 
     private void setCustomer() {
@@ -555,6 +560,8 @@ public class EditPurchaseReturnController implements Initializable {
             textFieldParty.setText(rs.getString("party_name"));
             textFieldContact.setText(rs.getString("party_contact"));
             textFieldRemarks.setText(rs.getString("remarks"));
+            date.setValue(new java.sql.Date(rs.getDate("invoice_date").getTime()).toLocalDate());
+            
             query = "select * from purchase_return_details where order_id = '" + id + "'";
             pstmt = con.prepareStatement(query);
             rs = pstmt.executeQuery();

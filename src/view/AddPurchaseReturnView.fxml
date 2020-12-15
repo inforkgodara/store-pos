@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
@@ -33,33 +34,15 @@
                 <Font name="Calibri" size="18.0" />
             </font>
         </Label>
-        <TableView fx:id="tableViewItem" layoutX="14.0" layoutY="54.0" onKeyReleased="#getSelectedRowTableView" onMouseClicked="#getSelectedRowTableView" prefHeight="477.0" prefWidth="1034.0" />
-        <Label fx:id="labelICustomer" layoutX="15.0" layoutY="536.0" prefHeight="25.0" prefWidth="82.0" text="Party" textFill="WHITE">
+        <TableView fx:id="tableViewItem" layoutX="14.0" layoutY="52.0" onKeyReleased="#getSelectedRowTableView" onMouseClicked="#getSelectedRowTableView" prefHeight="477.0" prefWidth="1034.0" />
+        <TextField fx:id="textFieldTotalQuantity" disable="true" editable="false" layoutX="1056.0" layoutY="82.0" prefHeight="25.0" prefWidth="114.0" />
+        <Label fx:id="labelTotalQuantity" layoutX="1058.0" layoutY="52.0" prefHeight="25.0" prefWidth="114.0" text="Total Quantity" textFill="WHITE">
             <font>
                 <Font name="Calibri" size="18.0" />
             </font>
         </Label>
-        <TextField fx:id="textFieldParty" layoutX="62.0" layoutY="538.0" onKeyReleased="#searchCustomer" prefHeight="25.0" prefWidth="207.0" />
-        <Label fx:id="labelItem11" layoutX="275.0" layoutY="536.0" prefHeight="25.0" prefWidth="82.0" text="Contact" textFill="WHITE">
-            <font>
-                <Font name="Calibri" size="18.0" />
-            </font>
-        </Label>
-        <TextField fx:id="textFieldContact" layoutX="336.0" layoutY="538.0" prefHeight="25.0" prefWidth="190.0" />
-        <Label fx:id="labelRemarks" layoutX="531.0" layoutY="538.0" prefHeight="25.0" prefWidth="70.0" text="Remarks" textFill="WHITE">
-            <font>
-                <Font name="Calibri" size="18.0" />
-            </font>
-        </Label>
-        <TextField fx:id="textFieldRemarks" layoutX="604.0" layoutY="538.0" prefHeight="25.0" prefWidth="445.0" />
-        <TextField fx:id="textFieldTotalQuantity" disable="true" editable="false" layoutX="1056.0" layoutY="84.0" prefHeight="25.0" prefWidth="114.0" />
-        <Label fx:id="labelTotalQuantity" layoutX="1058.0" layoutY="54.0" prefHeight="25.0" prefWidth="114.0" text="Total Quantity" textFill="WHITE">
-            <font>
-                <Font name="Calibri" size="18.0" />
-            </font>
-        </Label>
-        <TextField fx:id="textFieldTotalAmount" disable="true" editable="false" layoutX="1058.0" layoutY="147.0" prefHeight="25.0" prefWidth="114.0" />
-        <Label fx:id="LabelTotalAmount" layoutX="1060.0" layoutY="117.0" prefHeight="25.0" prefWidth="114.0" text="Total Amount" textFill="WHITE">
+        <TextField fx:id="textFieldTotalAmount" disable="true" editable="false" layoutX="1058.0" layoutY="145.0" prefHeight="25.0" prefWidth="114.0" />
+        <Label fx:id="LabelTotalAmount" layoutX="1060.0" layoutY="115.0" prefHeight="25.0" prefWidth="114.0" text="Total Amount" textFill="WHITE">
             <font>
                 <Font name="Calibri" size="18.0" />
             </font>
@@ -70,31 +53,55 @@
                 <Font name="Calibri" size="18.0" />
             </font>
         </Label>
-        <TextField fx:id="textFieldTotalOther" layoutX="1057.0" layoutY="205.0" onKeyReleased="#calculateTotalAmount" prefHeight="25.0" prefWidth="114.0" />
-        <Label fx:id="LabelTotalAmount1" layoutX="1090.0" layoutY="174.0" prefHeight="25.0" prefWidth="51.0" text="Other" textFill="WHITE">
+        <TextField fx:id="textFieldTotalOther" layoutX="1057.0" layoutY="203.0" onKeyReleased="#calculateTotalAmount" prefHeight="25.0" prefWidth="114.0" />
+        <Label fx:id="LabelTotalAmount1" layoutX="1090.0" layoutY="172.0" prefHeight="25.0" prefWidth="51.0" text="Other" textFill="WHITE">
             <font>
                 <Font name="Calibri" size="18.0" />
             </font>
         </Label>
-        <TextField fx:id="textFieldTotalPaybleAmount" disable="true" editable="false" layoutX="1057.0" layoutY="264.0" prefHeight="25.0" prefWidth="114.0" />
-        <Label fx:id="LabelTotalAmount11" layoutX="1054.0" layoutY="233.0" prefHeight="25.0" prefWidth="121.0" text="Payble Amount" textFill="WHITE">
+        <TextField fx:id="textFieldTotalPaybleAmount" disable="true" editable="false" layoutX="1057.0" layoutY="262.0" prefHeight="25.0" prefWidth="114.0" />
+        <Label fx:id="LabelTotalAmount11" layoutX="1054.0" layoutY="231.0" prefHeight="25.0" prefWidth="121.0" text="Payble Amount" textFill="WHITE">
             <font>
                 <Font name="Calibri" size="18.0" />
             </font>
         </Label>
-        <TextField fx:id="textFieldTotalPaidAmount" layoutX="1058.0" layoutY="324.0" onKeyReleased="#calculateDueAmount" prefHeight="25.0" prefWidth="114.0" />
-        <Label fx:id="LabelTotalAmount111" layoutX="1067.0" layoutY="293.0" prefHeight="25.0" prefWidth="102.0" text="Paid Amount" textFill="WHITE">
+        <TextField fx:id="textFieldTotalPaidAmount" layoutX="1058.0" layoutY="322.0" onKeyReleased="#calculateDueAmount" prefHeight="25.0" prefWidth="114.0" />
+        <Label fx:id="LabelTotalAmount111" layoutX="1067.0" layoutY="291.0" prefHeight="25.0" prefWidth="102.0" text="Paid Amount" textFill="WHITE">
             <font>
                 <Font name="Calibri" size="18.0" />
             </font>
         </Label>
-        <TextField fx:id="textFieldTotalDueAmount" disable="true" editable="false" layoutX="1057.0" layoutY="384.0" prefHeight="25.0" prefWidth="114.0" />
-        <Label fx:id="LabelTotalA" layoutX="1068.0" layoutY="353.0" prefHeight="25.0" prefWidth="102.0" text="Due Amount" textFill="WHITE">
+        <TextField fx:id="textFieldTotalDueAmount" disable="true" editable="false" layoutX="1057.0" layoutY="382.0" prefHeight="25.0" prefWidth="114.0" />
+        <Label fx:id="LabelTotalA" layoutX="1068.0" layoutY="351.0" prefHeight="25.0" prefWidth="102.0" text="Due Amount" textFill="WHITE">
             <font>
                 <Font name="Calibri" size="18.0" />
             </font>
         </Label>
         <Button fx:id="buttonSave" layoutX="1059.0" layoutY="538.0" mnemonicParsing="false" onAction="#save" text="Save" />
         <Button fx:id="buttonClear1" layoutX="1108.0" layoutY="538.0" mnemonicParsing="false" onAction="#clearWholeForm" text="Clear" />
+      <Label fx:id="labelICustomer" layoutX="15.0" layoutY="536.0" prefHeight="25.0" prefWidth="82.0" text="Party" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldParty" layoutX="62.0" layoutY="538.0" onKeyReleased="#searchCustomer" prefHeight="25.0" prefWidth="207.0" />
+      <Label fx:id="labelItem11" layoutX="275.0" layoutY="536.0" prefHeight="25.0" prefWidth="82.0" text="Contact" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldContact" layoutX="336.0" layoutY="538.0" prefHeight="25.0" prefWidth="190.0" />
+      <Label fx:id="labelRemarks" layoutX="531.0" layoutY="538.0" prefHeight="25.0" prefWidth="70.0" text="Remarks" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldRemarks" layoutX="604.0" layoutY="538.0" prefHeight="25.0" prefWidth="207.0" />
+      <DatePicker fx:id="date" layoutX="858.0" layoutY="538.0" prefHeight="25.0" prefWidth="190.0" />
+      <Label fx:id="labelRemarks1" layoutX="817.0" layoutY="538.0" prefHeight="25.0" prefWidth="70.0" text="Date" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
     </children>
 </AnchorPane>
