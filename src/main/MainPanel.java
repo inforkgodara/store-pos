@@ -21,13 +21,15 @@ public class MainPanel extends Application {
     public void start(Stage stage) throws Exception {
         
 //        Parent root = FXMLLoader.load(getClass().getResource("/view/ListSalesInvoiceView.fxml"));
-        Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+//        Parent root = FXMLLoader.load(getClass().getResource("/view/MainPanelView.fxml"));
+        
+        Parent root = FXMLLoader.load(getClass().getResource("/view/LoginView.fxml"));
         Scene scene = new Scene(root);
        
         
         stage.setScene(scene);
         stage.setTitle("Store ERP - Powered by Ramesh Godara");
-//        stage.getIcons().add(new Image("/asset/icon.png"));
+        stage.getIcons().add(new Image("/asset/icon.png"));
         stage.show();
     }
 
