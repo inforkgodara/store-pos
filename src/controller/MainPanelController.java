@@ -77,6 +77,25 @@ public class MainPanelController implements Initializable {
         purchaseSeries.getData().add(new XYChart.Data("16", 14500));
         purchaseSeries.getData().add(new XYChart.Data("17", 12000));
         
+        XYChart.Series purchaseReturnSeries= new XYChart.Series();
+        
+        purchaseReturnSeries.getData().add(new XYChart.Data("1", 0));
+        purchaseReturnSeries.getData().add(new XYChart.Data("2", 100));
+        purchaseReturnSeries.getData().add(new XYChart.Data("3", 0));
+        purchaseReturnSeries.getData().add(new XYChart.Data("5", 80));
+        purchaseReturnSeries.getData().add(new XYChart.Data("6", 110));
+        purchaseReturnSeries.getData().add(new XYChart.Data("7", 75));
+        purchaseReturnSeries.getData().add(new XYChart.Data("8", 1000));
+        purchaseReturnSeries.getData().add(new XYChart.Data("9", 0));
+        purchaseReturnSeries.getData().add(new XYChart.Data("10", 200));
+        purchaseReturnSeries.getData().add(new XYChart.Data("11", 95));
+        purchaseReturnSeries.getData().add(new XYChart.Data("12", 0));
+        purchaseReturnSeries.getData().add(new XYChart.Data("13", 0));
+        purchaseReturnSeries.getData().add(new XYChart.Data("14", 0));
+        purchaseReturnSeries.getData().add(new XYChart.Data("15", 100));
+        purchaseReturnSeries.getData().add(new XYChart.Data("16", 90));
+        purchaseReturnSeries.getData().add(new XYChart.Data("17", 0));
+        
         XYChart.Series saleSeries = new XYChart.Series();
         
         saleSeries.getData().add(new XYChart.Data("1", 12544));
@@ -95,6 +114,25 @@ public class MainPanelController implements Initializable {
         saleSeries.getData().add(new XYChart.Data("15", 7895));
         saleSeries.getData().add(new XYChart.Data("16", 8954));
         saleSeries.getData().add(new XYChart.Data("17", 7224));
+        
+        XYChart.Series saleReturnSeries = new XYChart.Series();
+        
+        saleReturnSeries.getData().add(new XYChart.Data("1", 800));
+        saleReturnSeries.getData().add(new XYChart.Data("2", 0));
+        saleReturnSeries.getData().add(new XYChart.Data("3", 0));
+        saleReturnSeries.getData().add(new XYChart.Data("5", 752));
+        saleReturnSeries.getData().add(new XYChart.Data("6", 42));
+        saleReturnSeries.getData().add(new XYChart.Data("7", 0));
+        saleReturnSeries.getData().add(new XYChart.Data("8", 22));
+        saleReturnSeries.getData().add(new XYChart.Data("9", 0));
+        saleReturnSeries.getData().add(new XYChart.Data("10", 0));
+        saleReturnSeries.getData().add(new XYChart.Data("11", 0));
+        saleReturnSeries.getData().add(new XYChart.Data("12", 118));
+        saleReturnSeries.getData().add(new XYChart.Data("13", 72));
+        saleReturnSeries.getData().add(new XYChart.Data("14", 0));
+        saleReturnSeries.getData().add(new XYChart.Data("15", 0));
+        saleReturnSeries.getData().add(new XYChart.Data("16", 8));
+        saleReturnSeries.getData().add(new XYChart.Data("17", 2));
         
         XYChart.Series receiptSeries = new XYChart.Series();
         
@@ -137,12 +175,13 @@ public class MainPanelController implements Initializable {
         receiptSeries.setName("Receipt");
         paymentSeries.setName("Payment");
         purchaseSeries.setName("Purchase");
+        purchaseReturnSeries.setName("Purchase Return");
         saleSeries.setName("Sale");
+        saleReturnSeries.setName("Sales Return");
         
-        chartPurchase.getData().addAll(purchaseSeries);
-        chartSale.getData().addAll(saleSeries);
-        chartReceipt.getData().addAll(paymentSeries, receiptSeries);
-        
+        chartPurchase.getData().addAll(purchaseSeries, purchaseReturnSeries);
+        chartSale.getData().addAll(saleSeries, saleReturnSeries);
+        chartReceipt.getData().addAll(paymentSeries, receiptSeries);    
     }
 
     private void changeButtonBackground(ActionEvent e) {

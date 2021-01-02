@@ -135,7 +135,7 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefHeight="129.0" prefWidth="1119.0">
+            <HBox prefHeight="108.0" prefWidth="1190.0">
                <children>
                   <AnchorPane prefHeight="129.0" prefWidth="208.0">
                      <children>
@@ -190,7 +190,7 @@
                               <Font name="System Bold" size="31.0" />
                            </font>
                         </Label>
-                        <Label contentDisplay="CENTER" layoutX="44.0" layoutY="46.0" prefHeight="58.0" prefWidth="103.0" text="Payment" textFill="WHITE">
+                        <Label contentDisplay="CENTER" layoutX="48.0" layoutY="46.0" prefHeight="58.0" prefWidth="103.0" text="Payment" textFill="WHITE">
                            <font>
                               <Font size="23.0" />
                            </font>
@@ -229,11 +229,11 @@
                   </AnchorPane>
                </children>
             </HBox>
-            <HBox prefHeight="199.0" prefWidth="1190.0">
+            <HBox prefHeight="244.0" prefWidth="1190.0">
                <children>
-                  <LineChart fx:id="chartReceipt" prefHeight="212.0" prefWidth="1162.0" title="Cash Flow">
+                  <LineChart fx:id="chartReceipt" prefHeight="240.0" prefWidth="1162.0" title="Cash Flow">
                     <xAxis>
-                      <CategoryAxis side="BOTTOM" />
+                      <CategoryAxis prefHeight="0.0" prefWidth="1105.0" side="BOTTOM" />
                     </xAxis>
                     <yAxis>
                       <NumberAxis side="LEFT" />
@@ -241,9 +241,9 @@
                   </LineChart>
                </children>
             </HBox>
-            <HBox prefHeight="177.0" prefWidth="1190.0">
+            <HBox prefHeight="254.0" prefWidth="1190.0">
                <children>
-                  <AreaChart fx:id="chartPurchase" prefHeight="191.0" prefWidth="600.0" title="Purchase">
+                  <AreaChart fx:id="chartPurchase" prefHeight="191.0" prefWidth="583.0" title="Purchase">
                     <xAxis>
                       <CategoryAxis label="Day" prefHeight="0.0" prefWidth="511.0" side="BOTTOM" />
                     </xAxis>
@@ -251,7 +251,7 @@
                       <NumberAxis label="Value" side="LEFT" />
                     </yAxis>
                   </AreaChart>
-                  <AreaChart fx:id="chartSale" prefHeight="191.0" prefWidth="564.0" title="Sale">
+                  <AreaChart fx:id="chartSale" prefHeight="250.0" prefWidth="578.0" title="Sale">
                      <xAxis>
                         <CategoryAxis label="Day" prefHeight="0.0" prefWidth="511.0" side="BOTTOM" />
                      </xAxis>
