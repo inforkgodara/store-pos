@@ -115,9 +115,33 @@ public class MainPanelController implements Initializable {
         receiptSeries.getData().add(new XYChart.Data("16", 8500));
         receiptSeries.getData().add(new XYChart.Data("17", 5000));
         
+        XYChart.Series paymentSeries = new XYChart.Series();
+        
+        paymentSeries.getData().add(new XYChart.Data("1", 6000));
+        paymentSeries.getData().add(new XYChart.Data("2", 5000));
+        paymentSeries.getData().add(new XYChart.Data("3", 8000));
+        paymentSeries.getData().add(new XYChart.Data("5", 12000));
+        paymentSeries.getData().add(new XYChart.Data("6", 6000));
+        paymentSeries.getData().add(new XYChart.Data("7", 10000));
+        paymentSeries.getData().add(new XYChart.Data("8", 10000));
+        paymentSeries.getData().add(new XYChart.Data("9", 8000));
+        paymentSeries.getData().add(new XYChart.Data("10", 5000));
+        paymentSeries.getData().add(new XYChart.Data("11", 7000));
+        paymentSeries.getData().add(new XYChart.Data("12", 6000));
+        paymentSeries.getData().add(new XYChart.Data("13", 8000));
+        paymentSeries.getData().add(new XYChart.Data("14", 6500));
+        paymentSeries.getData().add(new XYChart.Data("15", 10000));
+        paymentSeries.getData().add(new XYChart.Data("16", 6500));
+        paymentSeries.getData().add(new XYChart.Data("17", 8000));
+        
+        receiptSeries.setName("Receipt");
+        paymentSeries.setName("Payment");
+        purchaseSeries.setName("Purchase");
+        saleSeries.setName("Sale");
+        
         chartPurchase.getData().addAll(purchaseSeries);
         chartSale.getData().addAll(saleSeries);
-        chartReceipt.getData().addAll(receiptSeries);
+        chartReceipt.getData().addAll(paymentSeries, receiptSeries);
         
     }
 
