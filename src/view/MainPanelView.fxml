@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
@@ -108,7 +112,7 @@
       </VBox>
    </left>
    <top>
-      <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="800.0" style="-fx-background-color: #2b2a26;" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="1360.0" style="-fx-background-color: #2b2a26;" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="journalDetail1" mnemonicParsing="false" prefHeight="18.0" prefWidth="74.0" style="-fx-text-fill: #f0f0f0;" styleClass="bt" stylesheets="@mainpanel.css" text="Log Out" textAlignment="JUSTIFY">
                <font>
@@ -126,4 +130,42 @@
             <Insets right="5.0" />
          </BorderPane.margin></HBox>
    </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="185.0" prefWidth="1190.0">
+               <children>
+                  <AreaChart fx:id="chartPurchase" prefHeight="163.0" prefWidth="595.0" title="Purchase">
+                    <xAxis>
+                      <CategoryAxis label="Day" prefHeight="0.0" prefWidth="511.0" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis label="Value" side="LEFT" />
+                    </yAxis>
+                  </AreaChart>
+                  <AreaChart fx:id="chartSale" prefHeight="275.0" prefWidth="595.0" title="Sale">
+                     <xAxis>
+                        <CategoryAxis label="Day" prefHeight="0.0" prefWidth="511.0" side="BOTTOM" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis label="Value" side="LEFT" />
+                     </yAxis>
+                  </AreaChart>
+               </children>
+            </HBox>
+            <HBox prefHeight="197.0" prefWidth="1190.0">
+               <children>
+                  <LineChart fx:id="chartReceipt" prefHeight="210.0" prefWidth="1190.0" title="Receipt">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
 </BorderPane>
