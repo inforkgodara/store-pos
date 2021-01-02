@@ -54,3 +54,23 @@ You must have following programs/packages in order to run this project.
 
 ### Screenshot - 9
 ![Screenshot 9](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture9.png?raw=true "java-pos")
+
+### Screenshot - 10
+![Screenshot 10](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture10.png?raw=true "java-pos")
+
+### Screenshot - 11
+![Screenshot 11](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture11.png?raw=true "java-pos")
+
+### Screenshot - 12
+![Screenshot 12](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture12.png?raw=true "java-pos")
+
+### Screenshot - 13
+![Screenshot 13](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture13.png?raw=true "java-pos")
+
+### Screenshot - 14
+![Screenshot 14](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture14.png?raw=true "java-pos")
+
+### Screenshot - 15
+![Screenshot 15](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture15.png?raw=true "java-pos")
+
+## Note: The functionality is getting added and updated on every weekend.
