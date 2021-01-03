@@ -1,5 +1,5 @@
 # Store ERP
-This is simple accounting erp software for retail store which is developed in java JavaFx. Purchase and sale modules are completed inventory and finance module may be developed later once get time. I also looking for a java open source contributor who can help us to develop a complete product of accounting and finance erp. As of now, the purchase, sale, and inventory modules are completed and working on the finance module.
+This is simple accounting erp software for retail store which is developed in java JavaFx. Purchase, sale, and inventory modules are completed and finance module may be developed later once get time. I also looking for a java open source contributor who can help us to develop a complete product of accounting and finance erp.
 
 ### Note: If this project helped you kindly don't forget to give this repository a star that motivates me to work further and improve this project. I am trying too hard to get this project done somehow every weekend.
 
