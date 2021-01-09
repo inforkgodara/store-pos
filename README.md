@@ -31,10 +31,10 @@ You must have following programs/packages in order to run this project.
 ## Screenshots
 
 ### Screenshot - 1
-![Screenshot 1](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture1.png?raw=true "java-pos")
+![Screenshot 1](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture1.png?raw=true "java-pos")
 
 ### Screenshot - 2
-![Screenshot 2](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture2.png?raw=true "java-pos")
+![Screenshot 2](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture2.png?raw=true "java-pos")
 
 ### Screenshot - 3
 ![Screenshot 3](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture3.png?raw=true "java-pos")
