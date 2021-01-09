@@ -37,37 +37,37 @@ You must have following programs/packages in order to run this project.
 ![Screenshot 2](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture2.png?raw=true "java-pos")
 
 ### Screenshot - 3
-![Screenshot 3](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture3.png?raw=true "java-pos")
+![Screenshot 3](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture3.png?raw=true "java-pos")
 
 ### Screenshot - 4
-![Screenshot 4](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture4.png?raw=true "java-pos")
+![Screenshot 4](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture4.png?raw=true "java-pos")
 
 ### Screenshot - 5
-![Screenshot 5](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture5.png?raw=true "java-pos")
+![Screenshot 5](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture5.png?raw=true "java-pos")
 
 ### Screenshot - 6
-![Screenshot 6](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture6.png?raw=true "java-pos")
+![Screenshot 6](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture6.png?raw=true "java-pos")
 
 ### Screenshot - 7
-![Screenshot 7](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture7.png?raw=true "java-pos")
+![Screenshot 7](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture7.png?raw=true "java-pos")
 
 ### Screenshot - 8
-![Screenshot 8](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture8.png?raw=true "java-pos")
+![Screenshot 8](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture8.png?raw=true "java-pos")
 
 ### Screenshot - 9
-![Screenshot 9](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture9.png?raw=true "java-pos")
+![Screenshot 9](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture9.png?raw=true "java-pos")
 
 ### Screenshot - 10
-![Screenshot 10](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture10.png?raw=true "java-pos")
+![Screenshot 10](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture10.png?raw=true "java-pos")
 
 ### Screenshot - 11
-![Screenshot 11](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture11.png?raw=true "java-pos")
+![Screenshot 11](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture11.png?raw=true "java-pos")
 
 ### Screenshot - 12
-![Screenshot 12](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture12.png?raw=true "java-pos")
+![Screenshot 12](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture12.png?raw=true "java-pos")
 
 ### Screenshot - 13
-![Screenshot 13](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture13.png?raw=true "java-pos")
+![Screenshot 13](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture13.png?raw=true "java-pos")
 
 ### Screenshot - 14
-![Screenshot 14](https://raw.github.com/inforkgodara/java-erp/master/screenshots/Capture14.png?raw=true "java-pos")
+![Screenshot 14](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture14.png?raw=true "java-pos")
