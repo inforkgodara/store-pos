@@ -54,7 +54,7 @@ public class ListSalesReturnController implements Initializable {
     private Pagination pagination;
     
     private final TableView<SalesReturnModel> tableView = createTable();
-    private static final int rowsPerPage = 1;
+    private static final int rowsPerPage = 100;
 
     /**
      * Initializes the controller class.
