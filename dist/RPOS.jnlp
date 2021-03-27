@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="RPOS.jar" size="140886" download="eager" />
+    <jar href="RPOS.jar" size="138647" download="eager" />
     <jar href="lib\aopalliance-1.0.jar" size="4467" download="eager" />
     <jar href="lib\bcmail-jdk14-1.38.jar" size="192035" download="eager" />
     <jar href="lib\bcmail-jdk14-138.jar" size="192035" download="eager" />
