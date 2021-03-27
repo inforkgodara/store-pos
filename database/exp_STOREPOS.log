@@ -19,30 +19,35 @@ About to export POS's objects ...
                                                             4 rows exported
 EXP-00091: Exporting questionable statistics.
 . . exporting table                          ITEMS
-                                                            4 rows exported
+                                                            9 rows exported
 EXP-00091: Exporting questionable statistics.
 . . exporting table                    ITEM_PRICES
-.............
-                                                        13441 rows exported
+                                                            9 rows exported
 EXP-00091: Exporting questionable statistics.
 . . exporting table                      PURCHASES
-                                                            0 rows exported
+                                                            1 rows exported
+EXP-00091: Exporting questionable statistics.
 . . exporting table               PURCHASE_DETAILS
-                                                            0 rows exported
+                                                           28 rows exported
+EXP-00091: Exporting questionable statistics.
 . . exporting table               PURCHASE_RETURNS
                                                             0 rows exported
+EXP-00091: Exporting questionable statistics.
 . . exporting table        PURCHASE_RETURN_DETAILS
-                                                            0 rows exported
+                                                            2 rows exported
+EXP-00091: Exporting questionable statistics.
 . . exporting table                          SALES
-                                                            0 rows exported
+                                                           63 rows exported
 EXP-00091: Exporting questionable statistics.
 . . exporting table                   SALE_DETAILS
-                                                            0 rows exported
+                                                          161 rows exported
 EXP-00091: Exporting questionable statistics.
 . . exporting table                   SALE_RETURNS
                                                             0 rows exported
+EXP-00091: Exporting questionable statistics.
 . . exporting table            SALE_RETURN_DETAILS
-                                                            0 rows exported
+                                                            4 rows exported
+EXP-00091: Exporting questionable statistics.
 . . exporting table                           UOMS
                                                            62 rows exported
 EXP-00091: Exporting questionable statistics.
