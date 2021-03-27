@@ -25,8 +25,14 @@ You must have following programs/packages in order to run this project.
 
 * First need to clone this respiratory.
 * Configure your database schema credentials in src/database/DbConnection.
-* Import database from database/RPOS.DMP using (SQL Developer/SQL++, TOAD, etc).
+* Import database from database/STOREPOS.DMP using (SQL Developer/SQL++, TOAD, etc).
 * Run this project as part of java code through NetBeans IDE or command prompts.
+
+## Other devices
+
+* Monitor: Resolution 1366 x 768
+* Thermal printer: Star TSP100
+* Bar code scanner Honeywell Orbit MK7120-31A38
 
 ## Screenshots
 
