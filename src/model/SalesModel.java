@@ -20,13 +20,17 @@ public class SalesModel {
     private float totalPaybleAmount;
     private float totalPaidAmount;
     private float totalDueAmount;
+    private String currency;
+    private float taux;
 
     public SalesModel() {}
 
-    public SalesModel(long orderId, String invoiceDate, String partyName, float totalQuantity, float totalAmount, float otherAmount, float totalPaybleAmount, float totalPaidAmount, float totalDueAmount) {
+    public SalesModel(long orderId, String invoiceDate, String partyName, String currency, float taux, float totalQuantity, float totalAmount, float otherAmount, float totalPaybleAmount, float totalPaidAmount, float totalDueAmount) {
         this.orderId = orderId;
         this.invoiceDate = invoiceDate;
         this.partyName = partyName;
+        this.currency = currency;
+        this.taux = taux;
         this.totalQuantity = totalQuantity;
         this.totalAmount = totalAmount;
         this.otherAmount = otherAmount;
@@ -106,4 +110,21 @@ public class SalesModel {
     public void setTotalDueAmount(float totalDueAmount) {
         this.totalDueAmount = totalDueAmount;
     }
+
+    public String getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(String currency) {
+        this.currency = currency;
+    }
+
+    public float getTaux() {
+        return taux;
+    }
+
+    public void setTaux(float taux) {
+        this.taux = taux;
+    }
+    
 }

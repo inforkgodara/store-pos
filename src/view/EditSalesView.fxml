@@ -97,8 +97,15 @@
          </font>
       </Label>
       <TextField fx:id="textFieldRemarks" layoutX="603.0" layoutY="538.0" prefHeight="25.0" prefWidth="207.0" />
-      <DatePicker fx:id="date" layoutX="857.0" layoutY="538.0" prefHeight="25.0" prefWidth="190.0" />
+      <DatePicker fx:id="date" editable="false" layoutX="857.0" layoutY="538.0" prefHeight="25.0" prefWidth="190.0" />
       <Label fx:id="labelRemarks1" layoutX="816.0" layoutY="538.0" prefHeight="25.0" prefWidth="70.0" text="Date" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="comboBoxCurrency" layoutX="1059.0" layoutY="421.0" prefHeight="25.0" prefWidth="114.0" promptText="Currency" />
+      <TextField fx:id="textFieldTaux" layoutX="1061.0" layoutY="486.0" onKeyReleased="#calculateDueAmount" prefHeight="25.0" prefWidth="114.0" />
+      <Label fx:id="LabelTotalA1" layoutX="1094.0" layoutY="454.0" prefHeight="25.0" prefWidth="41.0" text="Taux" textFill="WHITE">
          <font>
             <Font name="Calibri" size="18.0" />
          </font>

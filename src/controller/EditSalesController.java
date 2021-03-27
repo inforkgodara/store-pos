@@ -60,6 +60,12 @@ public class EditSalesController implements Initializable {
 
     @FXML
     private ComboBox comboBoxUom;
+    
+    @FXML
+    private ComboBox comboBoxCurrency;
+    
+    @FXML
+    private TextField textFieldTaux;
 
     @FXML
     private TextField textFieldQty;
@@ -178,6 +184,9 @@ public class EditSalesController implements Initializable {
 
         comboBoxLocation.getItems().setAll("Rack", "Depot", "Display");
         comboBoxLocation.getSelectionModel().select("Depot");
+        
+        comboBoxCurrency.getItems().setAll("USD", "FC");
+        comboBoxCurrency.getSelectionModel().select("USD");
 
         try {
             viewInvoice(orderId);
@@ -455,10 +464,11 @@ public class EditSalesController implements Initializable {
             stmt.executeQuery("delete from sales where order_id = " + orderId);
             stmt.executeQuery("delete from sale_details where order_id =" + orderId);
             String query = "insert into sales (order_id,INVOICE_DATE,TOTAL_QUANTITY,TOTAL_AMOUNT,OTHER_AMOUNT,TOTAL_PAYBLE_AMOUNT,"
-                    + "TOTAL_PAID_AMOUNT,TOTAL_DUE_AMOUNT,PARTY_NAME,PARTY_CONTACT,REMARKS)"
+                    + "TOTAL_PAID_AMOUNT,TOTAL_DUE_AMOUNT,PARTY_NAME,PARTY_CONTACT,CURRENCY,TAUX,REMARKS)"
                     + "values(" + orderId + "," + "date '" + date.getValue() + "','" + textFieldTotalQuantity.getText() + "','" + textFieldTotalAmount.getText() + "',"
                     + "'" + textFieldTotalOther.getText() + "','" + textFieldTotalPaybleAmount.getText() + "','" + textFieldTotalPaidAmount.getText() + "','" + textFieldTotalDueAmount.getText() + "',"
                     + "'" + textFieldParty.getText() + "','" + textFieldContact.getText() + "',"
+                    + "'" + comboBoxCurrency.getValue() + "','" + textFieldTaux.getText() + "',"
                     + "'" + textFieldRemarks.getText() + "')";
             int rs = stmt.executeUpdate(query);
 
@@ -506,6 +516,7 @@ public class EditSalesController implements Initializable {
         textFieldTotalAmount.clear();
         textFieldTotalQuantity.clear();
         textFieldParty.clear();
+        textFieldTaux.clear();
         textFieldContact.clear();
         textFieldRemarks.clear();
         textFieldTotalAmount.clear();
@@ -559,6 +570,8 @@ public class EditSalesController implements Initializable {
             textFieldTotalDueAmount.setText(String.valueOf(rs.getFloat("total_due_amount")));
             textFieldParty.setText(rs.getString("party_name"));
             textFieldContact.setText(rs.getString("party_contact"));
+            comboBoxCurrency.setValue(rs.getString("currency"));
+            textFieldTaux.setText(String.valueOf(rs.getFloat("taux")));
             textFieldRemarks.setText(rs.getString("remarks"));
             date.setValue(new java.sql.Date(rs.getDate("invoice_date").getTime()).toLocalDate());
             query = "select * from sale_details where order_id = '" + id + "'";

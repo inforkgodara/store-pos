@@ -8,17 +8,16 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <AnchorPane prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: gray;" BorderPane.alignment="CENTER">
          <children>
-            <Text fill="WHITE" layoutX="18.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Store ERP" wrappingWidth="263.51171875">
+            <Text fill="WHITE" layoutX="24.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Store POS" wrappingWidth="263.51171875">
                <font>
-                  <Font name="System Bold" size="56.0" />
+                  <Font name="System Bold" size="54.0" />
                </font>
             </Text>
-            <Text fill="WHITE" layoutX="38.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Powered by Ramesh Godara">
+            <Text fill="WHITE" layoutX="37.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Powered by Ramesh Godara">
                <font>
                   <Font size="18.0" />
                </font>

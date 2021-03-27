@@ -82,7 +82,7 @@ public class ListSalesController implements Initializable {
             try {
                 while (rs.next()) {
                     tableView.getItems().addAll(new SalesModel(rs.getLong("order_id"), String.valueOf(rs.getDate("invoice_date")),
-                            rs.getString("party_name"), rs.getFloat("total_quantity"), rs.getFloat("total_amount"),
+                            rs.getString("party_name"), rs.getString("currency"), rs.getFloat("taux"), rs.getFloat("total_quantity"), rs.getFloat("total_amount"),
                             rs.getFloat("other_amount"), rs.getFloat("total_payble_amount"), rs.getFloat("total_paid_amount"), rs.getFloat("total_due_amount")));
                 }
             } catch (SQLException ex) {
@@ -109,6 +109,12 @@ public class ListSalesController implements Initializable {
 
         TableColumn<SalesModel, Long> columnPartyName = new TableColumn<>("Party");
         columnPartyName.setCellValueFactory(new PropertyValueFactory<>("partyName"));
+        
+        TableColumn<SalesModel, Long> columnCurrency = new TableColumn<>("Currency");
+        columnCurrency.setCellValueFactory(new PropertyValueFactory<>("currency"));
+        
+        TableColumn<SalesModel, Long> columnTaux = new TableColumn<>("Taux");
+        columnTaux.setCellValueFactory(new PropertyValueFactory<>("taux"));
 
         TableColumn<SalesModel, Long> columnTotalQuantity = new TableColumn<>("Quantity");
         columnTotalQuantity.setCellValueFactory(new PropertyValueFactory<>("totalQuantity"));
@@ -134,7 +140,7 @@ public class ListSalesController implements Initializable {
         columnTotalDueAmount.setCellValueFactory(new PropertyValueFactory<>("totalDueAmount"));
         columnTotalDueAmount.setStyle(rightPositionCSS);
 
-        tableView.getColumns().addAll(columnInvoiceId, columnInvoiceDate, columnPartyName, columnTotalQuantity,
+        tableView.getColumns().addAll(columnInvoiceId, columnInvoiceDate, columnPartyName, columnCurrency, columnTaux, columnTotalQuantity,
                 columnTotalAmount, columnOtherAmount, columnTotalPaybleAmount, columnTotalPaidAmount, columnTotalDueAmount);
 
         return tableView;

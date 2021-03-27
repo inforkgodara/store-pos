@@ -75,6 +75,12 @@ public class AddSalesController implements Initializable {
 
     @FXML
     private ComboBox comboBoxLocation;
+    
+    @FXML
+    private ComboBox comboBoxCurrency;
+    
+    @FXML
+    private TextField textFieldTaux;
 
     @FXML
     private TextField textFieldTotalQuantity;
@@ -171,6 +177,11 @@ public class AddSalesController implements Initializable {
 
         comboBoxLocation.getItems().setAll("Rack", "Depot", "Display");
         comboBoxLocation.getSelectionModel().select("Depot");
+        
+        comboBoxCurrency.getItems().setAll("USD", "FC");
+        comboBoxCurrency.getSelectionModel().select("USD");
+        
+        date.setValue(LocalDate.now());
     }
 
     @FXML
@@ -442,12 +453,14 @@ public class AddSalesController implements Initializable {
             rs1.next();
             int posSequence = rs1.getInt("nextval");
             String query = "insert into sales (order_id,INVOICE_DATE,TOTAL_QUANTITY,TOTAL_AMOUNT,OTHER_AMOUNT,TOTAL_PAYBLE_AMOUNT,"
-                    + "TOTAL_PAID_AMOUNT,TOTAL_DUE_AMOUNT,PARTY_NAME,PARTY_CONTACT,REMARKS)"
+                    + "TOTAL_PAID_AMOUNT,TOTAL_DUE_AMOUNT,PARTY_NAME,PARTY_CONTACT,CURRENCY,TAUX,REMARKS)"
                     + "values(" + posSequence + ",date '" + date.getValue() +"','" + textFieldTotalQuantity.getText() + "','" + textFieldTotalAmount.getText() + "',"
                     + "'" + textFieldTotalOther.getText() + "','" + textFieldTotalPaybleAmount.getText() + "','" + textFieldTotalPaidAmount.getText() + "','" + textFieldTotalDueAmount.getText() + "',"
                     + "'" + textFieldParty.getText() + "','" + textFieldContact.getText() + "',"
+                    + "'" + comboBoxCurrency.getValue() + "','" + textFieldTaux.getText() + "',"
                     + "'" + textFieldRemarks.getText() + "')";
             int rs = stmt.executeUpdate(query);
+            
 
             String posDetailsQuery = "insert into sale_details (order_id,ITEM_ID,ITEM_NAME,UOM,QUANTITY,PRICE,AMOUNT) ";
             int count = 0;
@@ -484,6 +497,7 @@ public class AddSalesController implements Initializable {
         textFieldTotalAmount.clear();
         textFieldTotalQuantity.clear();
         textFieldParty.clear();
+        textFieldTaux.clear();
         textFieldContact.clear();
         textFieldRemarks.clear();
         textFieldTotalAmount.clear();
@@ -505,6 +519,8 @@ public class AddSalesController implements Initializable {
             HashMap<String, Object> para = new HashMap<>();
             para.put("invoiceNo", "SHOP01/000001");
             para.put("party", textFieldParty.getText());
+            para.put("currency", comboBoxCurrency.getValue());
+            para.put("taux", textFieldTaux.getText());
             para.put("contact", textFieldContact.getText());
             para.put("totalQuantity", textFieldTotalQuantity.getText());
             para.put("totalAmount", textFieldTotalAmount.getText());

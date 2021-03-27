@@ -28,7 +28,7 @@ public class MainPanel extends Application {
        
         
         stage.setScene(scene);
-        stage.setTitle("Store ERP - Powered by Ramesh Godara");
+        stage.setTitle("Store POS - Powered by Ramesh Godara");
         stage.getIcons().add(new Image("/asset/icon.png"));
         stage.show();
     }
