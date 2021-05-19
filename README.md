@@ -35,7 +35,7 @@ You must have following programs/packages in order to run this project.
 * Bar code scanner Honeywell Orbit MK7120-31A38
 
 ## Demo
-* Video clip on youtube of the script execution. https://youtu.be/oxlqqS6dpbA
+* Video clip on demonstration: https://youtu.be/oxlqqS6dpbA
 
 ## Screenshots
 
