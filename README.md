@@ -34,6 +34,9 @@ You must have following programs/packages in order to run this project.
 * Thermal printer: Star TSP100
 * Bar code scanner Honeywell Orbit MK7120-31A38
 
+## Demo
+* Video clip on youtube of the script execution. https://youtu.be/oxlqqS6dpbA
+
 ## Screenshots
 
 ### Screenshot - 1
@@ -77,3 +80,5 @@ You must have following programs/packages in order to run this project.
 
 ### Screenshot - 14
 ![Screenshot 14](https://raw.github.com/inforkgodara/store-pos/master/screenshots/Capture14.png?raw=true "java-pos")
+
+Find it on youtube. https://youtu.be/oxlqqS6dpbA
