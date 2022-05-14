@@ -1,0 +1,17 @@
+
+
+public class GSC{
+	
+	int x;
+	
+	public GSC() {
+		
+	}
+	public int getX() {
+		return x;
+	}
+	public void setX(int x) {
+		this.x = x;
+	}
+
+}
